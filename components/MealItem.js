@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
   },
   details: {
     fontFamily: 'open-sans',
-    fontSize: 11,
+    fontSize: 13,
     color: '#eee',
   },
 });

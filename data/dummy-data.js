@@ -2,16 +2,66 @@ import Category from '../models/category';
 import Meal from '../models/meal';
 
 export const CATEGORIES = [
-  new Category('c1', 'Italian', '#f5428d'),
-  new Category('c2', 'Quick & Easy', '#f54242'),
-  new Category('c3', 'Hamburgers', '#f5a442'),
-  new Category('c4', 'German', '#f5d142'),
-  new Category('c5', 'Light & Lovely', '#368dff'),
-  new Category('c6', 'Exotic', '#41d95d'),
-  new Category('c7', 'Breakfast', '#9eecff'),
-  new Category('c8', 'Asian', '#b9ffb0'),
-  new Category('c9', 'French', '#ffc7ff'),
-  new Category('c10', 'Summer', '#47fced'),
+  new Category(
+    'c1',
+    'Italian',
+    '#f5428d',
+    'https://www.cucabali.com/wp-content/uploads/2015/05/italian-food-background.jpg'
+  ),
+  new Category(
+    'c2',
+    'Quick & Easy',
+    '#f54242',
+    'https://www.seriouseats.com/2018/04/20180418-savory-french-toast-vicky-wasik-28-1500x1125.jpg'
+  ),
+  new Category(
+    'c3',
+    'Hamburgers',
+    '#f5a442',
+    'https://aconteceagora.com.br/wp-content/uploads/2018/05/como_fazer_hamburguer_caseiro.jpg'
+  ),
+  new Category(
+    'c4',
+    'German',
+    '#f5d142',
+    'https://i3-img.sat1.de/pis/ezone/e74eqgELB38wdEB0AB1fHPDQCtTDCJ4UYl_Ic-IXCoYylZ0mXauk1M9wuU4rv5_rLEYRvbq7E9XZDDfMHZWh6xm0ZycUvSmJIa8pMomMw2PbHvnnQF82mVXhA70QNyxPJXJGIFW_TdTWqIRuDoGHN45WLi_ZGIwdhW0HJyDWk6nGOF70vKVmjeIdBu3UfytyGq2mBfMlHieNUIQDVm1d7zB2wmI-x42Csm_WUZoYaWTI40EPtnuM3ZHrWw28lAxC8Q/profile:mag-996x562'
+  ),
+  new Category(
+    'c5',
+    'Light & Lovely',
+    '#368dff',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg'
+  ),
+  new Category(
+    'c6',
+    'Exotic',
+    '#41d95d',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg'
+  ),
+  new Category(
+    'c7',
+    'Breakfast',
+    '#9eecff',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg'
+  ),
+  new Category(
+    'c8',
+    'Asian',
+    '#b9ffb0',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg'
+  ),
+  new Category(
+    'c9',
+    'French',
+    '#ffc7ff',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg'
+  ),
+  new Category(
+    'c10',
+    'Summer',
+    '#47fced',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg'
+  ),
 ];
 
 export const MEALS = [

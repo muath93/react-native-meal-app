@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Button } from 'react-native';
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
 import { enableScreens } from 'react-native-screens';
+import { AdMobBanner, AdMobRewarded } from 'expo-ads-admob';
 
 import MealsNavigator from './navigation/MealsNavigator';
+import { set } from 'react-native-reanimated';
 
 enableScreens();
 
@@ -28,14 +30,32 @@ export default function App() {
     );
   }
 
-  return <MealsNavigator />;
+  // const bannerError = (e) => {
+  //   console.log(e);
+  // };
+
+  return (
+    <>
+      <MealsNavigator style={styles.container} />
+      {/* <AdMobBanner
+        style={styles.ads}
+        bannerSize='smartBannerPortrait'
+        adUnitID='ca-app-pub-3940256099942544/6300978111' // Test ID, Replace with your-admob-unit-id
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={(e) => bannerError(e)}
+        setTestDeviceIDAsync='EMULATOR'
+      /> */}
+    </>
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    height: '80%',
+  },
+  ads: {
+    height: '8%',
+    width: '100%',
   },
 });
