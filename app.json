@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "HelloWorld",
+    "name": "Meal App",
     "slug": "meal-app",
     "platforms": [
       "ios",
