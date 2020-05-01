@@ -6,7 +6,7 @@ import { enableScreens } from 'react-native-screens';
 import { AdMobBanner, AdMobRewarded } from 'expo-ads-admob';
 
 import MealsNavigator from './navigation/MealsNavigator';
-import { set } from 'react-native-reanimated';
+// import { set } from 'react-native-reanimated';
 
 enableScreens();
 

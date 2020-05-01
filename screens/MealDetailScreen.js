@@ -27,6 +27,7 @@ MealDetailScreen.navigationOptions = (navData) => {
         <Item
           title='Favorate'
           iconName={'ios-star-outline'}
+          iconSize={23}
           onPress={() => {
             console.log('Mark as favorate');
           }}

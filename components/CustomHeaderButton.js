@@ -10,7 +10,7 @@ const CustomHeaderButton = (props) => {
     <HeaderButton
       {...props}
       IconComponent={Ionicons}
-      iconSize={23}
+      iconSize={props.iconSize}
       color={Platform.OS === 'android' ? 'white' : Colors.primaryColor}
     />
   );

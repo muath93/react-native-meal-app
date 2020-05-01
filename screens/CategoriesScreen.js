@@ -7,7 +7,10 @@ import {
   Button,
   TouchableOpacity,
 } from 'react-native';
+import { DrawerActions } from 'react-navigation-drawer';
+import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 
+import CustomHeaderButton from '../components/CustomHeaderButton';
 import CategoryGridTile from '../components/CategoryGridTile';
 import { CATEGORIES } from '../data/dummy-data';
 import Colors from '../constant/Colors';
@@ -40,9 +43,23 @@ const CategoriesScreen = (props) => {
   );
 };
 
-// CategoriesScreen.navigationOptions = {
-//   headerTitle: 'Meal Categories',
-// };
+CategoriesScreen.navigationOptions = (navData) => {
+  return {
+    headerTitle: 'Meal Categories',
+    headerLeft: () => (
+      <HeaderButtons HeaderButtonComponent={CustomHeaderButton}>
+        <Item
+          title='Menu'
+          iconName={'md-menu'}
+          iconSize={30}
+          onPress={() => {
+            navData.navigation.dispatch(DrawerActions.openDrawer());
+          }}
+        />
+      </HeaderButtons>
+    ),
+  };
+};
 
 export default CategoriesScreen;
 
