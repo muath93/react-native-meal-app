@@ -10,5 +10,12 @@ npm-debug.*
 web-build/
 web-report/
 
+# expo
+
+.expo
+.expo/*
+.expo-shared/
+web-build/
+
 # macOS
 .DS_Store
