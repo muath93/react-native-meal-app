@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   TouchableNativeFeedback,
   Platform,
+  Image,
 } from 'react-native';
 
 import Colors from '../constant/Colors';
@@ -45,8 +46,9 @@ const styles = StyleSheet.create({
   gridItem: {
     flex: 1,
     margin: 8,
-    height: 200,
+    height: 180,
     borderRadius: 10,
+    elevation: 5,
     overflow: 'hidden',
   },
   container: {
@@ -59,7 +61,6 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.3,
     shadowRadius: 3,
-    // elevation: 3,
     // overflow: 'hidden',
   },
   titleContainer: {
