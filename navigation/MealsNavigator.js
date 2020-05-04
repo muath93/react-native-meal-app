@@ -1,5 +1,5 @@
-import React from 'react';
-import { Platform } from 'react-native';
+import React, { useState } from 'react';
+import { Platform, Dimensions } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
@@ -7,6 +7,7 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 
+import CustomHeaderButton from '../components/CustomHeaderButton';
 import CategoriesScreen from '../screens/CategoriesScreen';
 import CategoryMealsScreen from '../screens/CategoryMealsScreen';
 import MealDetailScreen from '../screens/MealDetailScreen';
@@ -15,10 +16,20 @@ import FiltersScreen from '../screens/FiltersScree';
 
 import Colors from '../constant/Colors';
 
+const screenWidth = Math.round(Dimensions.get('window').width);
+
 const defaultNavigationOptions = {
   headerTitle: 'Screen',
   headerStyle: {
     backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : '',
+  },
+  headerTitleStyle: {
+    width: screenWidth - 150,
+    textAlign: 'center',
+    fontFamily: 'open-sans-bold',
+  },
+  headerBackTitleStyle: {
+    fontFamily: 'open-sans',
   },
   headerTintColor: Platform.OS === 'android' ? '#fff' : Colors.primaryColor,
 };
@@ -110,9 +121,44 @@ const FiltersNavigator = createStackNavigator(
   }
 );
 
-const MainNav = createDrawerNavigator({
-  Meals: MealsFavTabNavigator,
-  Filters: FiltersNavigator,
-});
+const MainNav = createDrawerNavigator(
+  {
+    MealsFavs: {
+      screen: MealsFavTabNavigator,
+      navigationOptions: {
+        drawerLabel: 'Meals',
+        drawerIcon: () => (
+          <Ionicons
+            name='md-restaurant'
+            size={25}
+            color={Colors.primaryColor}
+          />
+        ),
+      },
+    },
+    Filters: {
+      screen: FiltersNavigator,
+      navigationOptions: {
+        drawerLabel: 'Filters',
+        drawerIcon: () => (
+          <Ionicons name='ios-funnel' size={25} color={Colors.primaryColor} />
+        ),
+      },
+    },
+  },
+
+  {
+    contentOptions: {
+      activeTintColor: Colors.primaryColor,
+      inactiveTintColor: '#777',
+      labelStyle: {
+        fontFamily: 'open-sans-bold',
+      },
+      // itemStyle: {
+      //   marginTop: 40,
+      // },
+    },
+  }
+);
 
 export default createAppContainer(MainNav);
