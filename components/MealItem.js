@@ -8,6 +8,7 @@ import {
   TouchableNativeFeedback,
   Platform,
 } from 'react-native';
+import DefaultText from '../components/DefaultText';
 
 const MealItem = (props) => {
   let TouchableComponent = TouchableOpacity;
@@ -45,9 +46,11 @@ const MealItem = (props) => {
               ...styles.mealDetails,
             }}
           >
-            <Text style={styles.details}> {duration}m </Text>
-            <Text style={styles.details}> {complexity} </Text>
-            <Text style={styles.details}> {affordability.toUpperCase()} </Text>
+            <DefaultText style={styles.details}> {duration}m </DefaultText>
+            <DefaultText style={styles.details}> {complexity} </DefaultText>
+            <DefaultText style={styles.details}>
+              {affordability.toUpperCase()}
+            </DefaultText>
           </View>
         </View>
       </TouchableComponent>
@@ -98,7 +101,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(134, 29, 29, 0.8)',
   },
   details: {
-    fontFamily: 'open-sans',
     fontSize: 13,
     color: '#eee',
   },
